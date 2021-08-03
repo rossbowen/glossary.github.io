@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Build Documentation
 on: [push]
 jobs:
   build-documentation:
@@ -15,7 +15,7 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls .
       - name: Build documentation
         run: |
           "cd src; python -m pip install -r requirements.txt; python3 process.py"
