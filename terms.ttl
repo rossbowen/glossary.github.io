@@ -1,4 +1,4 @@
-@prefix : <https://gdac.github.io/business-glossary#> .
+@prefix : <https://gdac.github.io/business-glossary/#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
