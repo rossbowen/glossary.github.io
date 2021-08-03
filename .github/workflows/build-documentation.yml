@@ -18,7 +18,9 @@ jobs:
           ls .
       - name: Build documentation
         run: |
-          "cd src; python -m pip install -r requirements.txt; python3 process.py"
+          cd src
+          python -m pip install -r requirements.txt
+          python process.py
       - name: Commit documentation to repo
         run: |
           echo ${{ github.ref }}
