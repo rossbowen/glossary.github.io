@@ -33,8 +33,9 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: apt update
-      - run: apt install rsync
+      - run: |
+          apt update
+          apt install --yes rsync
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
