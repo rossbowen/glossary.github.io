@@ -43,91 +43,102 @@
 
     </section>
 
-    {% for item in jsonld %}
-    <section id="{{ item['skos:notation'] }}" resource="{{ item['@id'] }}" typeOf="{{ item['@type'] }}">
-        <h1>{{ item["skos:prefLabel"]["@value"] }}</h1>
-        <span property="skos:inScheme" resource="https://gdac.github.io/business-glossary"></span>
-        <table class="def">
-            {% if item["skos:prefLabel"] %}
-            <tr>
-                <th>{{ labels["skos:prefLabel"] }}</th>
-                <td><span property="skos:prefLabel">{{ item["skos:prefLabel"]["@value"] }}</span></td>
-            </tr>
-            {% endif %}
-            {% if item["skos:altLabel"] %}
-            <tr>
-                <th>{{ labels["skos:altLabel"] }}</th>
-                <td>{% for label in item["skos:altLabel"] %}<span property="skos:altLabel">{{ label }}</span>{% if not
-                    loop.last %}, {% endif %}{% endfor %}</td>
-            </tr>
-            {% endif %}
-            {% if item["@id"] %}
-            <tr>
-                <th>{{ labels["@id"] }}</th>
-                <td><a href="{{ item['@id'] }}"><code>{{ item["@id"] }}</code></a></td>
-            </tr>
-            {% endif %}
-            {% if item["skos:definition"] %}
-            <tr>
-                <th>{{ labels["skos:definition"] }}</th>
-                <td><span property="skos:definition" data-format="markdown">{{ item["skos:definition"]["@value"] }}<span></td>
-            </tr>
-            {% endif %}
-            {% if item["prov:wasDerivedFrom"] %}
-            <tr>
-                <th>{{ labels["prov:wasDerivedFrom"] }}</th>
-                <td>{% for url in item["prov:wasDerivedFrom"] %}<a property="prov:wasDerivedFrom"
-                        href="{{ url['@value'] }}"><code>{{ url['@value'] }}</code></a>{% if not loop.last %}, {% endif %}{%
-                    endfor %}</td>
-            </tr>
-            {% endif %}
-            {% if item["skos:narrower"] %}
-            <tr>
-                <th>{{ labels["skos:narrower"] }}</th>
-                <td>{% for url in item["skos:narrower"] %}<a property="skos:narrower"
-                        href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %}, {% endif %}{%
-                    endfor %}</td>
-            </tr>
-            {% endif %}
-            {% if item["skos:broader"] %}
-            <tr>
-                <th>{{ labels["skos:broader"] }}</th>
-                <td>{% for url in item["skos:broader"] %}<a property="skos:broader"
-                        href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %}, {% endif %}{%
-                    endfor %}</td>
-            </tr>
-            {% endif %}
-            {% if item["dcterms:creator"] %}
-            <tr>
-                <th>{{ labels["dcterms:creator"] }}</th>
-                <td><a property="dc:creator"
-                        href="{{ item['dcterms:creator']['@id'] }}"><code>{{ item["dcterms:creator"]["@id"]|replace("mailto:", "") }}</code></a>
-                </td>
-            </tr>
-            {% endif %}
-            {% if item["dcterms:contributor"] %}
-            <tr>
-                <th>{{ labels["dcterms:contributor"] }}</th>
-                <td><a property="dc:contributor"
-                        href="{{ item['dcterms:contributor']['@id'] }}"><code>{{ item["dcterms:contributor"]["@id"]|replace("mailto:", "") }}</code></a>
-                </td>
-            </tr>
-            {% endif %}
-            {% if item["dcterms:created"] %}
-            <tr>
-                <th>{{ labels["dcterms:created"] }}</th>
-                <td><span property="dcterms:created">{{ item["dcterms:created"] }}<span></td>
-            </tr>
-            {% endif %}
-            {% if item["dcterms:modified"] %}
-            <tr>
-                <th>{{ labels["dcterms:modified"] }}</th>
-                <td><span property="dcterms:modified">{{ item["dcterms:modified"] }}<span></td>
-            </tr>
-            {% endif %}
-        </table>
+    <section id="terms">
+        <h1>Terms</h1>
+        {% for item in jsonld %}
+        <section id="{{ item['skos:notation']['@value'] }}" resource="{{ item['@id'] }}" typeOf="{{ item['@type'] }}">
+            <h2>{{ item["skos:prefLabel"]["@value"] }}</h2>
+            <span property="skos:inScheme" resource="https://gdac.github.io/business-glossary"></span>
+            <table class="def">
+                {% if item["skos:prefLabel"] %}
+                <tr>
+                    <th>{{ labels["skos:prefLabel"] }}</th>
+                    <td><span property="skos:prefLabel">{{ item["skos:prefLabel"]["@value"] }}</span></td>
+                </tr>
+                {% endif %}
+                {% if item["skos:altLabel"] %}
+                <tr>
+                    <th>{{ labels["skos:altLabel"] }}</th>
+                    <td>{% for label in item["skos:altLabel"] %}<span property="skos:altLabel">{{ label['@value'] }}</span>
+                        {% if not loop.last %}, {% endif %}{% endfor %}</td>
+                </tr>
+                {% endif %}
+                {% if item["@id"] %}
+                <tr>
+                    <th>{{ labels["@id"] }}</th>
+                    <td><a href="{{ item['@id'] }}"><code>{{ item["@id"] }}</code></a></td>
+                </tr>
+                {% endif %}
+                {% if item["skos:definition"] %}
+                <tr>
+                    <th>{{ labels["skos:definition"] }}</th>
+                    <td><span property="skos:definition" data-format="markdown">{{ item["skos:definition"]["@value"] }}<span></td>
+                </tr>
+                {% endif %}
+                {% if item["prov:wasDerivedFrom"] %}
+                <tr>
+                    <th>{{ labels["prov:wasDerivedFrom"] }}</th>
+                    <td>{% for url in item["prov:wasDerivedFrom"] %}<a property="prov:wasDerivedFrom"
+                            href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %},<br> {% endif %}
+                        {%endfor %}</td>
+                </tr>
+                {% endif %}
+                {% if item["skos:related"] %}
+                <tr>
+                    <th>{{ labels["skos:related"] }}</th>
+                    <td>{% for url in item["skos:related"] %}<a property="skos:related"
+                            href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %},<br> {% endif %}
+                        {%endfor %}</td>
+                </tr>
+                {% endif %}
+                {% if item["skos:narrower"] %}
+                <tr>
+                    <th>{{ labels["skos:narrower"] }}</th>
+                    <td>{% for url in item["skos:narrower"] %}<a property="skos:narrower"
+                            href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %},<br> {% endif %}
+                        {%endfor %}</td>
+                </tr>
+                {% endif %}
+                {% if item["skos:broader"] %}
+                <tr>
+                    <th>{{ labels["skos:broader"] }}</th>
+                    <td>{% for url in item["skos:broader"] %}<a property="skos:broader"
+                            href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %},<br> {% endif %}
+                        {%endfor %}</td>
+                </tr>
+                {% endif %}
+                {% if item["dcterms:creator"] %}
+                <tr>
+                    <th>{{ labels["dcterms:creator"] }}</th>
+                    <td><a property="dc:creator"
+                            href="{{ item['dcterms:creator']['@id'] }}"><code>{{ item["dcterms:creator"]["@id"]|replace("mailto:", "") }}</code></a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% if item["dcterms:contributor"] %}
+                <tr>
+                    <th>{{ labels["dcterms:contributor"] }}</th>
+                    <td><a property="dc:contributor"
+                            href="{{ item['dcterms:contributor']['@id'] }}"><code>{{ item["dcterms:contributor"]["@id"]|replace("mailto:", "") }}</code></a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% if item["dcterms:created"] %}
+                <tr>
+                    <th>{{ labels["dcterms:created"] }}</th>
+                    <td><span property="dcterms:created">{{ item["dcterms:created"] }}<span></td>
+                </tr>
+                {% endif %}
+                {% if item["dcterms:modified"] %}
+                <tr>
+                    <th>{{ labels["dcterms:modified"] }}</th>
+                    <td><span property="dcterms:modified">{{ item["dcterms:modified"] }}<span></td>
+                </tr>
+                {% endif %}
+            </table>
+        </section>
+        {% endfor %}
     </section>
-    {% endfor %}
 </body>
 
 </html>

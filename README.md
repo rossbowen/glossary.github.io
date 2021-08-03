@@ -16,4 +16,4 @@ The vocabulary is available as a [Turtle file](https://github.com/rossbowen/glos
 
 Contributing
 ============
-[GitHub Issues](https://github.com/rossbowen/glossary/issues) are preferred for discussion of terms.
+[GitHub Issues](https://github.com/rossbowen/glossary/issues) are preferred for feedback and discussion of terms.

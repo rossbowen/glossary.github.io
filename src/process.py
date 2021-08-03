@@ -13,10 +13,11 @@ LABELS = {
     "dcterms:creator": "Created by:",
     "dcterms:contributor": "Contributor:",
     "prov:wasDerivedFrom": "Derived from:",
-    "skos:broader": "Broader terms",
-    "skos:narrower": "Narrower terms",
+    "skos:broader": "Broader terms:",
+    "skos:narrower": "Narrower terms:",
+    "skos:related": "Related terms:",
     "dcterms:created": "Created at:",
-    "dcterms:modified": "Modified at"
+    "dcterms:modified": "Modified at:"
 }
 
 with open("../terms.ttl") as file:
@@ -37,8 +38,15 @@ metadata = [item for item in data if item.get("@type") != "skos:Concept"]
 
 data = [item for item in data if item.get("@type") == "skos:Concept"]
 
-data.sort(key = lambda x: x["skos:prefLabel"]["@value"])
+data.sort(key = lambda x: x.get("skos:prefLabel")["@value"])
 
+# Make sure properties which can have multiple entries are handled as arrays
+for key in ["skos:related", "skos:broader", "skos:narrower", "skos:altLabel", "prov:wasDerivedFrom"]:
+    for x in data:
+        if x.get(key):
+            x[key] = [x[key]] if not isinstance(x[key], list) else x[key]
+
+#%%
 with open ("../README.md", "r") as myfile:
     readme = myfile.read().replace("\n", "\n" + " "*8)
 
