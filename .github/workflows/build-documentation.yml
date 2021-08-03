@@ -33,7 +33,8 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
+      - name: Install rsync 📚
+        run: |
           apt update
           apt install --yes rsync
       - name: Deploy 🚀
