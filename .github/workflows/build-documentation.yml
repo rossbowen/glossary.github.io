@@ -29,13 +29,13 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -m "CI: Building documentation" -a | exit 0
       - name: Push changes
-        if: github.ref == 'refs/heads/gh-pages'
+        if: github.ref == 'refs/heads/main'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: gh-pages
-          folder: build .
+          branch: main
+          folder: .
       - run: echo "🍏 This job's status is ${{ job.status }}."
