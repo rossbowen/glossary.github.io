@@ -1,29 +1,19 @@
-# GDAC Business Glossary
+Introduction
+============
 
-This repository contains the _GDAC Business Glossary_ work of the Government Data Architecture Community (GDAC) Business Glossary Sub-group.
+The Government Data Architecture Community (GDAC) is a cross-government collaborative network and related sub-groups (smaller communities of practice) that brings together anyone who works in or around the field of data architecture in local, regional, devolved and central government. We discuss good practice, challenges that we currently face and work together as data architects towards better data-sharing and interoperability throughout government.
 
-- [Documentation](https://rossbowen.github.io/glossary/)
+GDAC currently has four sub-groups which operate as smaller communities of practice collaborating around specific challenges to data-sharing and interoperability across government:
 
-### Building the vocabulary
+- Business glossaries
+- Metadata
+- Data standards
+- Data modelling
 
-The vocabulary is available as a [turtle file](./terms.ttl) which is created using CSV on the Web and Swirrl's `csv2rdf` library.
+The GDAC Business Glossary Sub-group aims to establish a common understanding of terms used by the community of data management professionals. This document is not intended to be an official, authoritative nor complete set of terms and their associated definitions, but rather a shared asset to encourage contributions, discussion, debate and engagement from the wider community.
 
-To add or amend terms, make changes to the [CSV file](./terms.csv) as required and then run Swirrl's `csv2rdf` tool.
+The vocabulary is available as a [Turtle file](https://github.com/rossbowen/glossary/blob/gh-pages/terms.ttl) from the project's [GitHub repository](https://github.com/rossbowen/glossary). For additional details on how this documentation was created and is maintained, see the [GitHub repository](https://github.com/rossbowen/glossary/tree/gh-pages/src).
 
-```sh
-docker run --rm -v $PWD:/workspace -w /workspace -it gsscogs/csv2rdf \
-csv2rdf -u terms.csv-metadata.json -m annotated -o terms.ttl
-```
-
-### Building the documentation
-
-The documentation makes use of github pages and is built from the vocabulary directly using a [python script](./src/process.py) and a [jinja2 template](./src/template.html).
-
-Changes to the documentation should be made to the template and then `index.html` rebuilt using the python script.
-
-```sh
-docker run --rm -v $PWD:/workspace -w /workspace -it python:latest \
-/bin/bash -c "python -m pip install -r requirements.txt; python3 process.py"
-```
-
-The styling is creating using a [custom profile](./src/respec-profile) of [W3C's Respec](https://github.com/w3c/respec) library.
+Contributing
+============
+[GitHub Issues](https://github.com/rossbowen/glossary/issues) are preferred for discussion of terms.

@@ -1,6 +1,5 @@
 @prefix : <https://gdac.github.io/business-glossary#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
@@ -9,9 +8,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :C_15478674304 a skos:Concept;
-  skos:notation :C_15478674304;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15478674304";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition """A repository of approved, governed and maintained compendium of business term names, there definitions and, optionally, their relationships to other business terms. It is the vocabulary of an organisation. A business term represents a business concept or an item of terminology of the organisation. 
 
 A Business Glossary is used to identify, approve and promote a consistent vocabulary and understanding of that vocabulary within an organisation. It provides an authoritative source for all business operations.
@@ -32,9 +31,9 @@ The Business Glossary captures attributes of a business term such as:
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_1547109210305 a skos:Concept;
-  skos:notation :C_1547109210305;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_1547109210305";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition """A defined classification of classes, types or concepts represented as a set of categories (i.e. a controlled vocabulary of terms), within a domain. It also includes the principles or rules that underlie such classification.
 
 A Taxonomy helps to reduce ambiguity and control synonyms. It is a system for naming and organising things into groups, that share similar characteristics, to make them easier to index and then to find.
@@ -51,9 +50,9 @@ There are several recognised types of Taxonomy."""@en;
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_15478289308 a skos:Concept;
-  skos:notation :C_15478289308;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15478289308";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition """A centralised repository used to define and communicate the structure and content of data sets.
 
 A data dictionary may describe data in business terms, however, the information held within a data  dictionary extends to include the ‘technology relevant’ or ‘machine readable’ articulation of data. 
@@ -67,7 +66,7 @@ The content of a data dictionary is usually extracted from the database or model
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_164710775302 a skos:Concept;
-  skos:notation :C_164710775302;
+  skos:notation "C_164710775302";
   skos:inScheme <https://gdac.github.io/business-glossary>;
   skos:prefLabel "Data Catlogue"@en .
 
@@ -79,9 +78,9 @@ The content of a data dictionary is usually extracted from the database or model
 :gdac <http://xmlns.com/foaf/0.1/name> "GDAC"@en .
 
 :C_15472599305 a skos:Concept;
-  skos:notation :C_15472599305;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15472599305";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition """An inventory of available data assets supported by a collection of metadata, enabling data users to:
 •	search for and find data quickly
 •	see all the available datasets
@@ -102,9 +101,9 @@ Modern machine learning-augmented data catalogues may automate various tasks inv
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_15474774304 a skos:Concept;
-  skos:notation :C_15474774304;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15474774304";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_1547109210305;
   skos:definition """A type of Taxonomy that is a hierarchical arrangement of categories. Categories are organised using hierarchical relationships into any number of levels of category and sub-category as required. A sub-category inherits all the properties of the category above it but can also have additional properties.
 
@@ -117,9 +116,9 @@ Not all hierarchies are simple, one-to-one-or-many parent-child relationships. S
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_1547997103010 a skos:Concept;
-  skos:notation :C_1547997103010;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_1547997103010";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_1547109210305;
   skos:definition "A type of Taxonomy that organises content into categories with hierarchical relationships or associative relationships. Categories can be linked to any other categories. Relationships among items can have different meanings, including semantic ones. E.g. “people who buy this also bought that”, “most popular”, etc."@en;
   skos:inScheme <https://gdac.github.io/business-glossary>;
@@ -128,9 +127,9 @@ Not all hierarchies are simple, one-to-one-or-many parent-child relationships. S
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_154748104306 a skos:Concept;
-  skos:notation :C_154748104306;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_154748104306";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_1547109210305;
   skos:definition "A type of Taxonomy that allows an item to be assigned to multiple taxonomies (sets of attributes), enabling the classification to be ordered in multiple ways, rather than in a single, predetermined order (as in a strict hierarchy)."@en;
   skos:inScheme <https://gdac.github.io/business-glossary>;
@@ -139,14 +138,14 @@ Not all hierarchies are simple, one-to-one-or-many parent-child relationships. S
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_4545410210303 a skos:Concept;
-  skos:notation :C_4545410210303;
+  skos:notation "C_4545410210303";
   skos:inScheme <https://gdac.github.io/business-glossary>;
   skos:prefLabel "Ontology"@en .
 
 :C_15476827306 a skos:Concept;
-  skos:notation :C_15476827306;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15476827306";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_1547109210305;
   skos:definition "A type of Taxonomy that is simply a list of categories. A Flat Taxonomy has only top-level categories."@en;
   skos:inScheme <https://gdac.github.io/business-glossary>;
@@ -155,9 +154,9 @@ Not all hierarchies are simple, one-to-one-or-many parent-child relationships. S
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_154721082307 a skos:Concept;
-  skos:notation :C_154721082307;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_154721082307";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition """A relationship between terms or records that are conceptually close but where the relationship is neither equivalent nor hierarchical.
 
 Providing visibility of concepts with an associative relationship can:
@@ -186,9 +185,9 @@ Types of associative relationships found between people include:
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_15472294302 a skos:Concept;
-  skos:notation :C_15472294302;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15472294302";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition """Refer to those relationships based on degrees or levels of superordination and subordination. These types of relationship are often referred to as broader/narrower relationships or parent/child relationship. Within a hierarchical relationship the superordinate/broader/parent term represents a class or a whole and the subordinate/narrower/child term refers to its members or parts. 
 	The 3 main types of hierarchical relationship include:
 		•	the whole/part relationships
@@ -201,9 +200,9 @@ Types of associative relationships found between people include:
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_1547454103010 a skos:Concept;
-  skos:notation :C_1547454103010;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_1547454103010";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_15472294302;
   skos:definition """A type of hierarchical relationship that covers situations where one concept is inherently included in the other. Each child should be part of the parent and all other ancestors so the terms can be organised into logical hierarchies with the whole or parent being treated as the superordinate or broader term. Whole /part relationships can be applied to several types of terms including geographic locations, parts of the body.
 Example of whole/part relationships:
@@ -218,9 +217,9 @@ o	Northern Ireland"""@en;
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_15475433307 a skos:Concept;
-  skos:notation :C_15475433307;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15475433307";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_15472294302;
   skos:definition """A type of hierarchical relationship found in vocabularies with a general category of things or events where the narrower/subordinate terms represent specific examples or instances of the broader/superordinate term. 
 Example of instance relationship:
@@ -234,9 +233,9 @@ o	Yangtze"""@en;
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_15475584307 a skos:Concept;
-  skos:notation :C_15475584307;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15475584307";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:broader :C_15472294302;
   skos:definition "A type of hierarchical relationship that identifies a link between a class and its members. Within this type of relationship, the narrower/subordinate/child term will be a ‘kind of’, ‘type of’ or ‘manifestation of’ the broader/superordinate/parent term.  The placement of a child may be tested by the all/some argument. In the example below all dolphins are mammals and some mammals are dolphins.  "@en;
   skos:inScheme <https://gdac.github.io/business-glossary>;
@@ -245,9 +244,9 @@ o	Yangtze"""@en;
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_15473372306 a skos:Concept;
-  skos:notation :C_15473372306;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_15473372306";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition "Information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness."@en;
   skos:inScheme <https://gdac.github.io/business-glossary>;
   skos:prefLabel "Provenance"@en;
@@ -255,9 +254,9 @@ o	Yangtze"""@en;
   skos:topConceptOf <https://gdac.github.io/business-glossary> .
 
 :C_154710495304 a skos:Concept;
-  skos:notation :C_154710495304;
-  dc:creator :gdac-business-glossary-subgroup;
-  dc:publisher :gdac;
+  skos:notation "C_154710495304";
+  dcterms:creator :gdac-business-glossary-subgroup;
+  dcterms:publisher :gdac;
   skos:definition "The path data follows from its original source to its current location. A description of the data lineage will include details of the pathway that was followed and the changes which were made to the data at different points along this pathway."@en;
   skos:inScheme <https://gdac.github.io/business-glossary>;
   skos:prefLabel "Data Lineage"@en;
