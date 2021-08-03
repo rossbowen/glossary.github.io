@@ -1,8 +1,7 @@
 #%%
 import json
-from collections import OrderedDict
 from jinja2 import Template
-from rdflib import Graph, URIRef, Literal
+from rdflib import Graph
 from rdflib.plugin import register, Parser
 register("json-ld", Parser, "rdflib_jsonld.parser", "JsonLDParser")
 
@@ -14,6 +13,8 @@ LABELS = {
     "dcterms:creator": "Created by:",
     "dcterms:contributor": "Contributor:",
     "prov:wasDerivedFrom": "Derived from:",
+    "skos:broader": "Broader terms",
+    "skos:narrower": "Narrower terms",
     "dcterms:created": "Created at:",
     "dcterms:modified": "Modified at"
 }
@@ -38,12 +39,18 @@ data = [item for item in data if item.get("@type") == "skos:Concept"]
 
 data.sort(key = lambda x: x["skos:prefLabel"]["@value"])
 
+with open ("../README.md", "r") as myfile:
+    readme = myfile.read().replace("\n", "\n" + " "*8)
+
 with open("./template.html") as f:
     tmpl = Template(f.read(), trim_blocks=True, lstrip_blocks=True)
+
 output = tmpl.render(
+    readme=readme,
     metadata=metadata,
     jsonld=data,
     labels=LABELS
 )
+
 with open("../index.html", "w") as fh:
     fh.write(output)

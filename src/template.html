@@ -54,33 +54,7 @@
 
     <section data-format="markdown">
 
-        Introduction
-        ============
-
-        The Government Data Architecture Community (GDAC) is a cross-government collaborative network and related
-        sub-groups (smaller communities of practice) that brings together anyone who works in or around the field of
-        data architecture in local, regional, devolved and central government. We discuss good practice, challenges that
-        we currently face and work together as data architects towards better data-sharing and interoperability
-        throughout government.
-
-        GDAC currently has four sub-groups which operate as smaller communities of practice collaborating around
-        specific challenges to data-sharing and interoperability across government:
-
-        - Business glossaries,
-        - Metadata,
-        - Data standards,
-        - Data modelling.
-
-        The GDAC Business Glossary Sub-group aims to establish a common understanding of terms used by the community of
-        data management professionals. This document is not intended to be an official, authoritative nor complete set
-        of terms and their associated definitions, but rather a shared asset to encourage contributions, discussion,
-        debate and engagement from the wider community.
-
-        Contributing
-        ============
-
-        [GitHub Issues](https://github.com/rossbowen/glossary/issues) are preferred for discussion of terms.
-        Alternatively, you can send comments to ???.
+        {{ readme }}
 
     </section>
 
@@ -119,6 +93,22 @@
                 <th>{{ labels["prov:wasDerivedFrom"] }}</th>
                 <td>{% for url in item["prov:wasDerivedFrom"] %}<a property="prov:wasDerivedFrom"
                         href="{{ url['@value'] }}"><code>{{ url['@value'] }}</code></a>{% if not loop.last %}, {% endif %}{%
+                    endfor %}</td>
+            </tr>
+            {% endif %}
+            {% if item["skos:narrower"] %}
+            <tr>
+                <th>{{ labels["skos:narrower"] }}</th>
+                <td>{% for url in item["skos:narrower"] %}<a property="skos:narrower"
+                        href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %}, {% endif %}{%
+                    endfor %}</td>
+            </tr>
+            {% endif %}
+            {% if item["skos:broader"] %}
+            <tr>
+                <th>{{ labels["skos:broader"] }}</th>
+                <td>{% for url in item["skos:broader"] %}<a property="skos:broader"
+                        href="{{ url['@id'] }}"><code>{{ url['@id'] }}</code></a>{% if not loop.last %}, {% endif %}{%
                     endfor %}</td>
             </tr>
             {% endif %}
