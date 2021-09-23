@@ -29,12 +29,16 @@
         };
     </script>
     <script type="application/ld+json">
-<<<<<<< HEAD
-    [{'@id': 'https://gdac.github.io/business-glossary/#gdac-business-glossary-subgroup', 'http://xmlns.com/foaf/0.1/name': {'@language': 'en', '@value': 'GDAC Busness Glossary Subgroup'}}, {'@id': 'https://gdac.github.io/business-glossary', '@type': 'skos:ConceptScheme', 'skos:prefLabel': {'@language': 'en', '@value': 'GDAC Vocabulary'}}, {'@id': 'https://gdac.github.io/business-glossary/#gdac', 'http://xmlns.com/foaf/0.1/name': {'@language': 'en', '@value': 'GDAC'}}]
-=======
-    [{'@id': 'https://gdac.github.io/business-glossary-subgroup', '@type': 'http://www.w3.org/2006/vcard/ns#Group', 'http://www.w3.org/2006/vcard/ns#organization-name': {'@language': 'en', '@value': 'GDAC Business Glossary Sub-group'}}, {'@id': 'https://gdac.github.io/business-glossary', '@type': 'skos:ConceptScheme', 'dcterms:contributor': {'@id': 'https://gdac.github.io/business-glossary-subgroup'}}, {'@id': 'https://gdac.github.io/business-glossary/#', '@type': 'http://www.w3.org/2002/07/owl#Ontology', 'http://www.w3.org/2002/07/owl#imports': {'@id': 'https://purl.org/dcterms/elements/1.1/'}}]
->>>>>>> 481260d (Update ttl)
+    [{'@id': 'https://gdac.github.io/business-glossary', '@type': 'skos:ConceptScheme', 'dcterms:contributor': {'@id': 'https://gdac.github.io/business-glossary-subgroup'}}, {'@id': 'https://gdac.github.io/business-glossary-subgroup', '@type': 'http://www.w3.org/2006/vcard/ns#Group', 'http://www.w3.org/2006/vcard/ns#organization-name': {'@language': 'en', '@value': 'GDAC Business Glossary Sub-group'}}, {'@id': 'https://gdac.github.io/business-glossary/#', '@type': 'http://www.w3.org/2002/07/owl#Ontology', 'http://www.w3.org/2002/07/owl#imports': {'@id': 'https://purl.org/dcterms/elements/1.1/'}}]
     </script>
+
+    <style>
+        td { 
+            overflow: hidden;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    </style>
 </head>
 
 <body resource="https://gdac.github.io/business-glossary" typeOf="skos:ConceptScheme">
@@ -108,9 +112,9 @@ Types of associative relationships found between people include:
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://marciazeng.slis.kent.edu/Z3919/44association.htm"><code>https://marciazeng.slis.kent.edu/Z3919/44association.htm</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://thetaxonomyblog.wordpress.com/category/building-taxonomies/associative-relationships/"><code>https://thetaxonomyblog.wordpress.com/category/building-taxonomies/associative-relationships/</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf"><code>https://getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf</code></a></td>
+                            href="https://getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf"><code>https://getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://marciazeng.slis.kent.edu/Z3919/44association.htm"><code>https://marciazeng.slis.kent.edu/Z3919/44association.htm</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
@@ -157,17 +161,17 @@ The Business Glossary captures attributes of a business term such as:
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/"><code>https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://www.dataversity.net/what-is-a-business-glossary/"><code>https://www.dataversity.net/what-is-a-business-glossary/</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://www.dataversity.net/business-glossary-basics/"><code>https://www.dataversity.net/business-glossary-basics/</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a></td>
+                            href="https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/"><code>https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.dataversity.net/business-glossary-basics/"><code>https://www.dataversity.net/business-glossary-basics/</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#taxonomy"><code>https://gdac.github.io/business-glossary/#taxonomy</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#data-dictionary"><code>https://gdac.github.io/business-glossary/#data-dictionary</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#data-catalogue"><code>https://gdac.github.io/business-glossary/#data-catalogue</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#data-catalogue"><code>https://gdac.github.io/business-glossary/#data-catalogue</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#data-dictionary"><code>https://gdac.github.io/business-glossary/#data-dictionary</code></a></td>
                 </tr>
                 <tr>
                     <th>Created by:</th>
@@ -210,8 +214,8 @@ Modern machine learning-augmented data catalogues may automate various tasks inv
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://www.gartner.com/en/documents/3957301/augmented-data-catalogs-now-an-enterprise-must-have-for-"><code>https://www.gartner.com/en/documents/3957301/augmented-data-catalogs-now-an-enterprise-must-have-for-</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://www.dataversity.net/what-is-a-data-catalog/"><code>https://www.dataversity.net/what-is-a-data-catalog/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.gartner.com/en/documents/3957301/augmented-data-catalogs-now-an-enterprise-must-have-for-"><code>https://www.gartner.com/en/documents/3957301/augmented-data-catalogs-now-an-enterprise-must-have-for-</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://www.alation.com/blog/what-is-a-data-catalog/"><code>https://www.alation.com/blog/what-is-a-data-catalog/</code></a></td>
                 </tr>
                 <tr>
@@ -256,15 +260,21 @@ The content of a data dictionary is usually extracted from the database or model
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
                             href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://www.dataversity.net/what-is-a-data-catalog/"><code>https://www.dataversity.net/what-is-a-data-catalog/</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://www.dataversity.net/what-is-a-data-dictionary/"><code>https://www.dataversity.net/what-is-a-data-dictionary/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.dataversity.net/what-is-a-data-catalog/"><code>https://www.dataversity.net/what-is-a-data-catalog/</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/"><code>https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#business-glossary"><code>https://gdac.github.io/business-glossary/#business-glossary</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#data-catalogue"><code>https://gdac.github.io/business-glossary/#data-catalogue</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#data-catalogue"><code>https://gdac.github.io/business-glossary/#data-catalogue</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#business-glossary"><code>https://gdac.github.io/business-glossary/#business-glossary</code></a></td>
+                </tr>
+                <tr>
+                    <th>Created by:</th>
+                    <td><a property="dc:creator"
+                            href="https://gdac.github.io/business-glossary-subgroup"><code>https://gdac.github.io/business-glossary-subgroup</code></a>
+                    </td>
                 </tr>
             </table>
         </section>
@@ -351,15 +361,15 @@ The content of a data dictionary is usually extracted from the database or model
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://martech.org/website-taxonomy-guidelines-tips/"><code>https://martech.org/website-taxonomy-guidelines-tips/</code></a></td>
+                            href="https://martech.org/website-taxonomy-guidelines-tips/"><code>https://martech.org/website-taxonomy-guidelines-tips/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#flat-taxonomy"><code>https://gdac.github.io/business-glossary/#flat-taxonomy</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#hierarchical-taxonomy"><code>https://gdac.github.io/business-glossary/#hierarchical-taxonomy</code></a>,<br> <a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#network-taxonomy"><code>https://gdac.github.io/business-glossary/#network-taxonomy</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#hierarchical-taxonomy"><code>https://gdac.github.io/business-glossary/#hierarchical-taxonomy</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#flat-taxonomy"><code>https://gdac.github.io/business-glossary/#flat-taxonomy</code></a></td>
                 </tr>
                 <tr>
                     <th>Broader terms:</th>
@@ -393,14 +403,14 @@ The content of a data dictionary is usually extracted from the database or model
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://martech.org/website-taxonomy-guidelines-tips/"><code>https://martech.org/website-taxonomy-guidelines-tips/</code></a></td>
+                            href="https://martech.org/website-taxonomy-guidelines-tips/"><code>https://martech.org/website-taxonomy-guidelines-tips/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#network-taxonomy"><code>https://gdac.github.io/business-glossary/#network-taxonomy</code></a>,<br> <a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#hierarchical-taxonomy"><code>https://gdac.github.io/business-glossary/#hierarchical-taxonomy</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#network-taxonomy"><code>https://gdac.github.io/business-glossary/#network-taxonomy</code></a>,<br> <a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#facet-taxonomy"><code>https://gdac.github.io/business-glossary/#facet-taxonomy</code></a></td>
                 </tr>
                 <tr>
@@ -431,10 +441,11 @@ The content of a data dictionary is usually extracted from the database or model
                 <tr>
                     <th>Definition:</th>
                     <td><span property="skos:definition" data-format="markdown">Refer to those relationships based on degrees or levels of superordination and subordination. These types of relationship are often referred to as broader/narrower relationships or parent/child relationship. Within a hierarchical relationship the superordinate/broader/parent term represents a class or a whole and the subordinate/narrower/child term refers to its members or parts. 
+
 The 3 main types of hierarchical relationship include:
-        - the whole/part relationships
-        - the instance relationship
-        - genus/species relationship.<span></td>
+- the whole/part relationships
+- the instance relationship
+- genus/species relationship.<span></td>
                 </tr>
                 <tr>
                     <th>Derived from:</th>
@@ -538,9 +549,9 @@ Rivers
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#the-genus/species-relationship"><code>https://gdac.github.io/business-glossary/#the-genus/species-relationship</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#genus-species-relationship"><code>https://gdac.github.io/business-glossary/#genus-species-relationship</code></a>,<br> <a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#whole-part-relationship"><code>https://gdac.github.io/business-glossary/#whole-part-relationship</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#genus-species-relationship"><code>https://gdac.github.io/business-glossary/#genus-species-relationship</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#the-genus/species-relationship"><code>https://gdac.github.io/business-glossary/#the-genus/species-relationship</code></a></td>
                 </tr>
                 <tr>
                     <th>Broader terms:</th>
@@ -581,8 +592,8 @@ Rivers
                     <th>Related terms:</th>
                     <td><a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#hierarchical-taxonomy"><code>https://gdac.github.io/business-glossary/#hierarchical-taxonomy</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#facet-taxonomy"><code>https://gdac.github.io/business-glossary/#facet-taxonomy</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#flat-taxonomy"><code>https://gdac.github.io/business-glossary/#flat-taxonomy</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#flat-taxonomy"><code>https://gdac.github.io/business-glossary/#flat-taxonomy</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#facet-taxonomy"><code>https://gdac.github.io/business-glossary/#facet-taxonomy</code></a></td>
                 </tr>
                 <tr>
                     <th>Broader terms:</th>
@@ -623,15 +634,15 @@ Ontologies are used in the Semantic Web as the primary knowledge representations
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
                             href="https://tomgruber.org/writing/ontology-definition-2007.htm"><code>https://tomgruber.org/writing/ontology-definition-2007.htm</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html"><code>https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://www.dataversity.net/what-is-ontology/"><code>https://www.dataversity.net/what-is-ontology/</code></a></td>
+                            href="https://www.dataversity.net/what-is-ontology/"><code>https://www.dataversity.net/what-is-ontology/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html"><code>https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#data-dictionary"><code>https://gdac.github.io/business-glossary/#data-dictionary</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#data-catalogue"><code>https://gdac.github.io/business-glossary/#data-catalogue</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#business-glossary"><code>https://gdac.github.io/business-glossary/#business-glossary</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#business-glossary"><code>https://gdac.github.io/business-glossary/#business-glossary</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#data-catalogue"><code>https://gdac.github.io/business-glossary/#data-catalogue</code></a></td>
                 </tr>
                 <tr>
                     <th>Created by:</th>
@@ -701,24 +712,24 @@ The content of a data dictionary is usually extracted from the database or model
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://en.wikipedia.org/wiki/Taxonomy"><code>https://en.wikipedia.org/wiki/Taxonomy</code></a>,<br> <a property="prov:wasDerivedFrom"
                             href="https://www.dama.org/cpages/body-of-knowledge"><code>https://www.dama.org/cpages/body-of-knowledge</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://martech.org/website-taxonomy-guidelines-tips/"><code>https://martech.org/website-taxonomy-guidelines-tips/</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://www.dataversity.net/what-is-taxonomy/"><code>https://www.dataversity.net/what-is-taxonomy/</code></a></td>
+                            href="https://www.dataversity.net/what-is-taxonomy/"><code>https://www.dataversity.net/what-is-taxonomy/</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://en.wikipedia.org/wiki/Taxonomy"><code>https://en.wikipedia.org/wiki/Taxonomy</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://martech.org/website-taxonomy-guidelines-tips/"><code>https://martech.org/website-taxonomy-guidelines-tips/</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#business-glossary"><code>https://gdac.github.io/business-glossary/#business-glossary</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#data-dictionary"><code>https://gdac.github.io/business-glossary/#data-dictionary</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#data-dictionary"><code>https://gdac.github.io/business-glossary/#data-dictionary</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#business-glossary"><code>https://gdac.github.io/business-glossary/#business-glossary</code></a></td>
                 </tr>
                 <tr>
                     <th>Narrower terms:</th>
                     <td><a property="skos:narrower"
-                            href="https://gdac.github.io/business-glossary/#network-taxonomy"><code>https://gdac.github.io/business-glossary/#network-taxonomy</code></a>,<br> <a property="skos:narrower"
+                            href="https://gdac.github.io/business-glossary/#facet-taxonomy"><code>https://gdac.github.io/business-glossary/#facet-taxonomy</code></a>,<br> <a property="skos:narrower"
                             href="https://gdac.github.io/business-glossary/#hierarchical-taxonomy"><code>https://gdac.github.io/business-glossary/#hierarchical-taxonomy</code></a>,<br> <a property="skos:narrower"
-                            href="https://gdac.github.io/business-glossary/#flat-taxonomy"><code>https://gdac.github.io/business-glossary/#flat-taxonomy</code></a>,<br> <a property="skos:narrower"
-                            href="https://gdac.github.io/business-glossary/#facet-taxonomy"><code>https://gdac.github.io/business-glossary/#facet-taxonomy</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#network-taxonomy"><code>https://gdac.github.io/business-glossary/#network-taxonomy</code></a>,<br> <a property="skos:narrower"
+                            href="https://gdac.github.io/business-glossary/#flat-taxonomy"><code>https://gdac.github.io/business-glossary/#flat-taxonomy</code></a></td>
                 </tr>
                 <tr>
                     <th>Created by:</th>
@@ -752,14 +763,14 @@ The content of a data dictionary is usually extracted from the database or model
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf"><code>https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm"><code>https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm</code></a></td>
+                            href="https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm"><code>https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf"><code>https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#instance-relationship"><code>https://gdac.github.io/business-glossary/#instance-relationship</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#whole-part-relationship"><code>https://gdac.github.io/business-glossary/#whole-part-relationship</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#whole-part-relationship"><code>https://gdac.github.io/business-glossary/#whole-part-relationship</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#instance-relationship"><code>https://gdac.github.io/business-glossary/#instance-relationship</code></a></td>
                 </tr>
                 <tr>
                     <th>Broader terms:</th>
@@ -790,24 +801,24 @@ The content of a data dictionary is usually extracted from the database or model
                     <th>Definition:</th>
                     <td><span property="skos:definition" data-format="markdown">A type of hierarchical relationship that covers situations where one concept is inherently included in the other. Each child should be part of the parent and all other ancestors so the terms can be organised into logical hierarchies with the whole or parent being treated as the superordinate or broader term. Whole/part relationships can be applied to several types of terms including geographic locations, parts of the body.
 Example of whole/part relationships:
-    - United Kingdom
-        - England
-        - Wales
-        - Scotland
-        - Northern Ireland.<span></td>
+- United Kingdom
+  - England
+  - Wales
+  - Scotland
+  - Northern Ireland.<span></td>
                 </tr>
                 <tr>
                     <th>Derived from:</th>
                     <td><a property="prov:wasDerivedFrom"
-                            href="https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm"><code>https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm</code></a>,<br> <a property="prov:wasDerivedFrom"
-                            href="https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf"><code>https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf</code></a></td>
+                            href="https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf"><code>https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf</code></a>,<br> <a property="prov:wasDerivedFrom"
+                            href="https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm"><code>https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm</code></a></td>
                 </tr>
                 <tr>
                     <th>Related terms:</th>
                     <td><a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#genus-species-relationship"><code>https://gdac.github.io/business-glossary/#genus-species-relationship</code></a>,<br> <a property="skos:related"
+                            href="https://gdac.github.io/business-glossary/#the-genus/species-relationship"><code>https://gdac.github.io/business-glossary/#the-genus/species-relationship</code></a>,<br> <a property="skos:related"
                             href="https://gdac.github.io/business-glossary/#instance-relationship"><code>https://gdac.github.io/business-glossary/#instance-relationship</code></a>,<br> <a property="skos:related"
-                            href="https://gdac.github.io/business-glossary/#the-genus/species-relationship"><code>https://gdac.github.io/business-glossary/#the-genus/species-relationship</code></a></td>
+                            href="https://gdac.github.io/business-glossary/#genus-species-relationship"><code>https://gdac.github.io/business-glossary/#genus-species-relationship</code></a></td>
                 </tr>
                 <tr>
                     <th>Broader terms:</th>

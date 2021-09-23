@@ -144,11 +144,11 @@ Types of associative relationships found between people include:
     skos:broader :hierarchical-relationship ;
     skos:definition """A type of hierarchical relationship that covers situations where one concept is inherently included in the other. Each child should be part of the parent and all other ancestors so the terms can be organised into logical hierarchies with the whole or parent being treated as the superordinate or broader term. Whole/part relationships can be applied to several types of terms including geographic locations, parts of the body.
 Example of whole/part relationships:
-    - United Kingdom
-        - England
-        - Wales
-        - Scotland
-        - Northern Ireland."""@en ;
+- United Kingdom
+  - England
+  - Wales
+  - Scotland
+  - Northern Ireland."""@en ;
     skos:inScheme <https://gdac.github.io/business-glossary> ;
     skos:prefLabel "Whole/Part Relationship"@en ;
     skos:related :instance-relationship,
@@ -190,6 +190,7 @@ Modern machine learning-augmented data catalogues may automate various tasks inv
     dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
     dcterms:publisher "GDAC"@en ;
     dct:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
     skos:definition """A centralised repository used to define and communicate the structure and content of data sets.
 
 A data dictionary may describe data in business terms, however, the information held within a data dictionary extends to include the ‘technology relevant’ or ‘machine readable’ articulation of data. 
@@ -370,10 +371,11 @@ The content of a data dictionary is usually extracted from the database or model
     dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
     dct:publisher "GDAC"@en ;
     skos:definition """Refer to those relationships based on degrees or levels of superordination and subordination. These types of relationship are often referred to as broader/narrower relationships or parent/child relationship. Within a hierarchical relationship the superordinate/broader/parent term represents a class or a whole and the subordinate/narrower/child term refers to its members or parts. 
+
 The 3 main types of hierarchical relationship include:
-        - the whole/part relationships
-        - the instance relationship
-        - genus/species relationship."""@en;
+- the whole/part relationships
+- the instance relationship
+- genus/species relationship."""@en;
     skos:inScheme <https://gdac.github.io/business-glossary> ;
     skos:narrower :instance-relationship,
         <https://gdac.github.io/business-glossary/#the-genus/species-relationship>,
